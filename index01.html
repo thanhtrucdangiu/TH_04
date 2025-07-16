@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text" placeholder="name">
+    <button id="btncheck">Check</button>
+    <script>
+        var inputname = document.getElementById("name")
+        var btncheck = document.getElementById("btncheck")
+
+        function Truc() {
+            console.log("HELLO " + inputname.value);
+        }
+        btncheck.onclick = Truc;
+    </script>
+</body>
+
+</html>
