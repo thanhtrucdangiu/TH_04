@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="so1" type="text" placeholder="Nhap so thu 1"> +
+    <input id="so2" type="text" placeholder="Nhap so thu 2"> =
+    <span id="hienthi"></span><br>
+    <button id="but">Kết quả</button>
+
+    <script>
+        var inputso1 = document.getElementById('so1');
+        var inputso2 = document.getElementById('so2');
+        var hienthi = document.getElementById('hienthi');
+        var but = document.getElementById('but');
+
+        function sum() {
+            var num1 = parseFloat(inputso1.value);
+            var num2 = parseFloat(inputso2.value);
+            var ketqua = num1 + num2;
+            hienthi.textContent = ketqua;
+            console.log(ketqua);
+        }
+        but.onclick = sum;
+    </script>
+</body>
+
+</html>
