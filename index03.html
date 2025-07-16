@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text" placeholder="Nhap">
+    <button id="but">Xac nhan</button>
+    <span id="check"></span>
+
+    <script>
+        var inputname = document.getElementById('name');
+        var check = document.getElementById('check');
+        var but = document.getElementById('but');
+
+        function callcheck() {
+            var pattern = /\d/;
+            var value = inputname.value;
+            if (value == '') {
+                check.innerText = "Xin hay nhap";
+            } else if (pattern.test(value)) {
+                check.innerText = "Ban vua nhap so";
+            } else
+                check.innerText = "Ban vua nhap chu";
+
+        }
+
+        but.onclick = callcheck;
+    </script>
+</body>
+
+</html>
